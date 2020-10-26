@@ -1,0 +1,11 @@
+{
+  "name": "baddies-theme",
+  "author": "Michael Ryan",
+  "version": "1.0.0",
+  "description": "Baddies.org homepage",
+  "license": "Proprietary",
+  "global": {
+    "js": ["js/baddies-theme.js"],
+    "css": ["css/baddies-theme.min.css"]
+  }
+}

@@ -1,0 +1,273 @@
+@import "baddies-colors"
+
+@font-face
+  font-family: "Colors Of Autumn"
+  src: url("../fonts/Colors Of Autumn.ttf") format('truetype')
+
+@font-face
+  font-family: "Aqua"
+  src: url("../fonts/aqua.ttf") format('truetype')
+
+
+@mixin form-style
+  background-color: $input-background
+  color: $input-text
+  border-radius: 0
+  border: 0
+  padding: .75rem
+
+@mixin select-style
+  @include form-style
+
+.baddies
+  background: $background
+  color: $text-regular
+  line-height: 1.75rem
+
+  h1, h2, h3, h4, h5, h6
+    font-family: "Aqua", Verdana, Tahoma
+    text-transform: uppercase
+    font-weight: 500
+
+  h1, h2
+    color: $highlight-primary
+    margin: 0 0 1rem 0
+
+  h3
+    color: $highlight-secondary
+    margin: 0 0 .5rem 0
+
+  h4, h5, h6
+    margin: 0 0 .5rem 0
+  h1
+    font-size: 2.5rem
+    line-height: 2.5rem
+
+  h2
+    font-size: 1.75rem
+    line-height: 1.75rem
+
+  h3
+    font-size: 1.5rem
+    line-height: 1.5rem
+
+
+    &:focus
+      outline: 2px solid $highlight-primary
+
+  p
+    margin: 0 0 1rem 0
+
+  .area-baddies
+    background: $background
+    color: $text-regular
+
+
+  .text-baddies
+    font-family: "Colors Of Autumn", Verdana, Tahoma !important
+    color: $text-baddies
+
+  .aui
+
+    &.input, &.textarea, &.datalist
+      label
+        input, textarea
+          @include form-style
+
+        textarea
+          height: 5rem
+          max-width: 100%
+          min-width: 100%
+          min-height: 3rem
+          max-height: 10rem
+
+    &.select
+      label
+        select
+          @include select-style
+
+    &.btn-primary
+      background: $highlight-primary
+
+      &:hover
+        background: $highlight-secondary
+
+
+
+
+/* --- Text Colors --- */
+.text-legendary
+  color: $legendary
+
+.text-epic
+  color: $epic
+
+.text-rare
+  color: $rare
+
+.text-uncommon
+  color: $uncommon
+
+/* --- Class Colors Text --- */
+.text-death-knight
+  color: #C41F3B
+
+.text-demon-hunter
+  color: #A330C9
+
+.text-druid
+  color: #FF7D0A
+
+.text-hunter
+  color: #ABD473
+
+.text-mage
+  color: #69CCF0
+
+.text-monk
+  color: #00FF96
+
+.text-paladin
+  color: #F58CBA
+
+.text-priest
+  color: #FFFFFF
+
+.text-rogue
+  color: #FFF569
+
+.text-shaman
+  color: #0070DE
+
+.text-warlock
+  color: #9482C9
+
+.text-warrior
+  color: #C79C6E
+
+/* --- Class Colors Backgrounds --- */
+.background-deathknight
+  border: 1px solid #C41F3B
+  background: lighten(#C41F3B, 10%)
+
+  &:hover
+    background: lighten(#C41F3B, 5%)
+
+
+.background-demonhunter
+  border: 1px solid #A330C9
+  background: lighten(#A330C9, 10%)
+
+  &:hover
+    background: lighten(#A330C9, 5%)
+
+.background-druid
+  border: 1px solid #FF7D0A
+  background: lighten(#FF7D0A, 10%)
+
+  &:hover
+    background: lighten(#FF7D0A, 5%)
+
+.background-hunter
+  border: 1px solid #ABD473
+  background: lighten(#ABD473, 10%)
+
+  &:hover
+    background: lighten(#ABD473, 5%)
+
+.background-mage
+  border: 1px solid #69CCF0
+  background: lighten(#69CCF0, 10%)
+
+  &:hover
+    background: lighten(#69CCF0, 5%)
+
+.background-monk
+  border: 1px solid #00FF96
+  background: lighten(#00FF96, 10%)
+
+  &:hover
+    background: lighten(#00FF96, 5%)
+
+.background-paladin
+  border: 1px solid #F58CBA
+  background: lighten(#F58CBA, 10%)
+
+  &:hover
+    background: lighten(#F58CBA, 5%)
+
+.background-priest
+  border: 1px solid darken(#FFFFFF, 20%)
+  background: darken(#FFFFFF, 5%)
+
+  &:hover
+    background: lighten(#FFFFFF, 5%)
+
+.background-rogue
+  border: 1px solid #FFF569
+  background: lighten(#FFF569, 10%)
+
+  &:hover
+    background: lighten(#FFF569, 5%)
+
+.background-shaman
+  border: 1px solid #0070DE
+  background: lighten(#0070DE, 20%)
+
+  &:hover
+    background: lighten(#0070DE, 10%)
+
+.background-warlock
+  border: 1px solid #9482C9
+  background: lighten(#9482C9, 10%)
+
+  &:hover
+    background: lighten(#9482C9, 5%)
+
+.background-warrior
+  border: 1px solid #C79C6E
+  background: lighten(#C79C6E, 10%)
+
+  &:hover
+    background: lighten(#C79C6E, 5%)
+
+#navigation
+  display: flex
+  justify-content: center
+  position: fixed
+  width: 100%
+  z-index: 1000
+  top: 0
+  border-bottom: 1px solid #848892
+
+  .nav
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+
+    a
+      text-decoration: none
+
+      .nav-item
+        padding: 1rem
+        color: $text-baddies
+
+        &.active
+          text-decoration: none
+          position: relative
+
+          &:after
+            content: ''
+            width: 100%
+            position: absolute
+            left: 0
+            bottom: .75rem
+            border-width: 0 0 .25rem
+            border-style: solid
+            border-color: $highlight-primary
+
+        &:hover
+          background: $highlight-primary
+          cursor: pointer
+
