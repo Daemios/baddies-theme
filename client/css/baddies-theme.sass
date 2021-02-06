@@ -70,21 +70,24 @@
   .aui
 
     &.input, &.textarea, &.datalist
-      label
-        input, textarea
-          @include form-style
+      .standard-container
+        .cap-container
 
-        textarea
-          height: 5rem
-          max-width: 100%
-          min-width: 100%
-          min-height: 3rem
-          max-height: 10rem
+            input, textarea
+              @include form-style
+
+            textarea
+              height: 5rem
+              max-width: 100%
+              min-width: 100%
+              min-height: 3rem
+              max-height: 10rem
 
     &.select
-      label
-        select
-          @include select-style
+      .standard-container
+        .cap-container
+          select
+            @include select-style
 
     &.btn-primary
       background: $highlight-primary
